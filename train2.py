@@ -4,8 +4,6 @@ from mlflow.utils.mlflow_tags import MLFLOW_RUN_NAME
 experiment_name = 'exp002'
 mlflow.set_experiment(experiment_name)
 
-mlflow.set_tag(MLFLOW_RUN_NAME, 'mnist_classification')
-
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.datasets import mnist
@@ -36,6 +34,9 @@ with mlflow.start_run(run_name='2DCNN', nested=True):
     batch_size = 128
 
     model.compile(loss=loss, optimizer=optimizer, metrics=metrics)
+
+    mlflow.keras.autolog()
+
     model.fit(X_train, y_train, epochs=epoch, batch_size=batch_size, validation_data=(X_valid, y_valid))
 
     mlflow.log_param("loss", loss)
