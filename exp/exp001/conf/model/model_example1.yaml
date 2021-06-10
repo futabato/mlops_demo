@@ -1,0 +1,15 @@
+# 実験番号
+exp:
+  number: 'exp002'
+
+# モデルに使うパラメータ
+model:
+  neuron: 300
+
+# 実験時に使うパラメータ
+training:
+  loss: 'sparse_categorical_crossentropy'
+  optimizer: 'adam'
+  metrics: ['accuracy']
+  epoch: 10
+  batch_size: 256
