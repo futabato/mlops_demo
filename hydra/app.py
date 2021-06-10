@@ -1,10 +1,12 @@
 import hydra
-#from omegaconf import DictConfig, OmegaConf
 
 @hydra.main(config_path="conf", config_name="config")
 def app(cfg) -> None:
-    print(cfg.pretty())
-#    print(OmegaConf.to_yaml(cfg))
-
+    config = cfg
+    print(config)
+    batch_size = cfg.model.batch_size
+    print(batch_size)
+    data = cfg.data.img
+    print(data)
 if __name__ == "__main__":
     app()

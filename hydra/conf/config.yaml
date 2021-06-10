@@ -1,2 +1,3 @@
 defaults:
   - model: example1
+  - data: data1
