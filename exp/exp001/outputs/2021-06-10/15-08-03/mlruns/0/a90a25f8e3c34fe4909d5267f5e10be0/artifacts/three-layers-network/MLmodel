@@ -1,0 +1,14 @@
+artifact_path: three-layers-network
+flavors:
+  keras:
+    data: data
+    keras_module: tensorflow.keras
+    keras_version: 2.5.0
+    save_format: tf
+  python_function:
+    data: data
+    env: conda.yaml
+    loader_module: mlflow.keras
+    python_version: 3.8.5
+run_id: a90a25f8e3c34fe4909d5267f5e10be0
+utc_time_created: '2021-06-10 06:09:00.739001'

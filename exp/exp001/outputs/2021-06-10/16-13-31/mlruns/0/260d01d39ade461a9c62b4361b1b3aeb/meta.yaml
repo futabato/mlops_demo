@@ -1,0 +1,15 @@
+artifact_uri: file:///home/futabato/GitHub/mlops-demo/exp/exp001/outputs/2021-06-10/16-13-31/mlruns/0/260d01d39ade461a9c62b4361b1b3aeb/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 260d01d39ade461a9c62b4361b1b3aeb
+run_uuid: 260d01d39ade461a9c62b4361b1b3aeb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1623309211558
+status: 1
+tags: []
+user_id: futabato

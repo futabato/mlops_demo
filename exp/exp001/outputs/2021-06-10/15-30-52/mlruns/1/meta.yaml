@@ -1,0 +1,4 @@
+artifact_location: file:///home/futabato/GitHub/mlops-demo/exp/exp001/outputs/2021-06-10/15-30-52/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: exp001
