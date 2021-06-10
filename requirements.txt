@@ -2,3 +2,4 @@ h5py==2.10.0
 mlflow
 hydra-core
 tensorflow
+keras
