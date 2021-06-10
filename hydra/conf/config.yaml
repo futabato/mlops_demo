@@ -1,5 +1,2 @@
-db:
-  driver: postgresql
-  pass: drowssap
-  timeout: 20
-  user: postgre_user
+defaults:
+  - model: example1
