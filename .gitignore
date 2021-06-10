@@ -1,4 +1,4 @@
 work/
 mlflow/mlruns
 mlflow/output.txt
-hydra/output/
+hydra/outputs/
