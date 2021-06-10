@@ -2,3 +2,6 @@ work/
 mlflow/mlruns
 mlflow/output.txt
 hydra/outputs/
+exp/exp001/mlruns/
+exp/exp001/outputs/
+exp/exp001/output.txt
