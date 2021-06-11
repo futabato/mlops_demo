@@ -1,7 +1,7 @@
 ## Install
 
 ```
-$ git clone https://github.com/futabato/mlflow-test
+$ git clone https://github.com/futabato/mlops-demo
 $ pip install -r requirements.txt
 ```
 
