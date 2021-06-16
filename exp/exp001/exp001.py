@@ -29,7 +29,7 @@ def main(cfg):
     mlflow.set_tracking_uri("file://" + hydra.utils.get_original_cwd() + "/mlruns")
     
     # 実験番号のロード
-    experiment_name = cfg.exp.number
+    experiment_name = cfg.model.exp.number
     mlflow.set_experiment(experiment_name)
     
     # dataの用意。abciのパスをyamlに書くことになりそう。
@@ -43,11 +43,11 @@ def main(cfg):
     mlflow.keras.autolog()
     
     # configからのロード
-    loss = cfg.training.loss
-    optimizer = cfg.training.optimizer
-    metrics = cfg.training.metrics
-    epoch = cfg.training.epoch
-    batch_size = cfg.training.batch_size
+    loss = cfg.model.training.loss
+    optimizer = cfg.model.training.optimizer
+    metrics = cfg.model.training.metrics
+    epoch = cfg.model.training.epoch
+    batch_size = cfg.model.training.batch_size
 
     model = create_model(loss, optimizer, metrics)
     test_loss, test_accuracy = train(model, epoch, batch_size, X_train, y_train, X_valid, y_valid, X_test, y_test)
@@ -62,7 +62,7 @@ def main(cfg):
     mlflow.log_metrics({'loss': test_loss})
     mlflow.log_metrics({'accuracy': test_accuracy})    
     
-    mlflow.keras.log_model(model, cfg.exp.number)
+    #mlflow.keras.log_model(model, cfg.exp.number)
     
     # hydraのyamlの保存
     mlflow.log_artifact('.hydra/config.yaml')
