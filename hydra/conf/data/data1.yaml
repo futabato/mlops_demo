@@ -1,2 +1,6 @@
-data:
+train:
   img: 1
+valid:
+  label: 1
+test:
+  foo: 'bar'

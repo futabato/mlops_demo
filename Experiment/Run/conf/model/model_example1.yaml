@@ -1,6 +1,6 @@
 # 実験番号
 exp:
-  number: 'exp002'
+  number: 'exp001'
 
 # モデルに使うパラメータ
 model:

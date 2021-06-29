@@ -4,7 +4,6 @@ from tensorflow.keras.datasets import mnist
 
 import mlflow
 from mlflow.utils.mlflow_tags import MLFLOW_RUN_NAME
-import mlflow.keras
 import hydra
 
 import os
@@ -40,14 +39,14 @@ def main(cfg):
 
     # mlflowに記録を始めさせる
     mlflow.start_run(run_name=experiment_name)
-    mlflow.keras.autolog()
+    mlflow.tensorflow.autolog()
     
     # configからのロード
-    loss = cfg.training.loss
-    optimizer = cfg.training.optimizer
-    metrics = cfg.training.metrics
-    epoch = cfg.training.epoch
-    batch_size = cfg.training.batch_size
+    loss = cfg.model.training.loss
+    optimizer = cfg.model.training.optimizer
+    metrics = cfg.model.training.metrics
+    epoch = cfg.model.training.epoch
+    batch_size = cfg.model.training.batch_size
 
     model = create_model(loss, optimizer, metrics)
     test_loss, test_accuracy = train(model, epoch, batch_size, X_train, y_train, X_valid, y_valid, X_test, y_test)
@@ -60,11 +59,8 @@ def main(cfg):
     mlflow.log_param("batch_size", batch_size)
 
     mlflow.log_metrics({'loss': test_loss})
-    mlflow.log_metrics({'accuracy': test_accuracy})    
+    mlflow.log_metrics({'accuracy': test_accuracy})
     
-    mlflow.keras.log_model(model, cfg.exp.number)
-    
-    # hydraのyamlの保存
     mlflow.log_artifact('.hydra/config.yaml')
     mlflow.log_artifact('.hydra/hydra.yaml')
     mlflow.log_artifact('.hydra/overrides.yaml')

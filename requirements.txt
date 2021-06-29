@@ -4,5 +4,8 @@ six~=1.15.0
 mlflow
 hydra-core
 tensorflow-cpu==2.4.0
+<<<<<<< HEAD
 #tensorflow-gpu==2.4.0
+=======
+>>>>>>> 49ac9e7332ec6e403e263b3991afed367cb86b7f
 keras
