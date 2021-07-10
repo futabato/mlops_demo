@@ -18,10 +18,21 @@ $ docker build -t mlops_demo .
 $ docker run --rm -it -v "${PWD}:/home" --name mlops_demo -p 5000:5000 mlops_demo /bin/bash
 ```
 
+## handson
+
 - mlflow/
   - mlflowを説明するために必要な最小限のコード
 - hydra/
   - hydraを説明するために必要な最小限のコード
-- exp/
+- Experiment/
   - mlflowとhydraを組み合わせて実験管理を行うための最小限のコード
 
+### MLflow WebUI
+
+```
+$ mlflow ui
+```
+
+```
+$ mlflow ui -h `hostname`
+```
