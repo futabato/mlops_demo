@@ -1,8 +1,8 @@
 ## install
 
 ```
-$ git clone https://github.com/futabato/mlops-demo
-$ cd $_
+$ git clone https://github.com/futabato/mlops_demo
+$ cd mlops_demo
 ```
 
 ### pip install
@@ -18,7 +18,7 @@ $ docker build -t mlops_demo .
 $ docker run --rm -it -v "${PWD}:/home" --name mlops_demo -p 5000:5000 mlops_demo /bin/bash
 ```
 
-## handson
+## hands-on
 
 - mlflow/
   - mlflowを説明するために必要な最小限のコード
@@ -32,6 +32,8 @@ $ docker run --rm -it -v "${PWD}:/home" --name mlops_demo -p 5000:5000 mlops_dem
 ```
 $ mlflow ui
 ```
+
+or
 
 ```
 $ mlflow ui -h `hostname`
