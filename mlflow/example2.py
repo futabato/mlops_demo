@@ -1,7 +1,7 @@
 import mlflow
 from mlflow.utils.mlflow_tags import MLFLOW_RUN_NAME
 
-experiment_name = 'exp002'
+experiment_name = 'MNIST-Classification'
 mlflow.set_experiment(experiment_name)
 
 import tensorflow as tf
@@ -30,7 +30,7 @@ with mlflow.start_run(run_name='2DCNN', nested=True):
     loss = 'sparse_categorical_crossentropy'
     optimizer = 'adam'
     metrics = ['accuracy']
-    epoch = 30
+    epoch = 10
     batch_size = 128
 
     model.compile(loss=loss, optimizer=optimizer, metrics=metrics)
@@ -39,15 +39,4 @@ with mlflow.start_run(run_name='2DCNN', nested=True):
 
     model.fit(X_train, y_train, epochs=epoch, batch_size=batch_size, validation_data=(X_valid, y_valid))
 
-    mlflow.log_param("loss", loss)
-    mlflow.log_param("optimizer", optimizer)
-    mlflow.log_param("metrics", metrics)
-    mlflow.log_param("epoch", epoch)
-    mlflow.log_param("batch_size", batch_size)
-
     test_loss, test_accuracy = model.evaluate(X_test, y_test)
-
-    mlflow.log_metrics({'loss': test_loss})
-    mlflow.log_metrics({'accuracy': test_accuracy})
-
-    mlflow.keras.log_model(model, '2DCNN')
