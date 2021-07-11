@@ -9,7 +9,7 @@ with mlflow.start_run():
     mlflow.log_metric("foo", 3)
 
     with open("output.txt", "a") as f:
-        f.write("Hello")
+        f.write("Hello, MLflow!")
 
     mlflow.log_artifact("output.txt")
 
