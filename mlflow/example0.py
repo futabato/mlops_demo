@@ -1,5 +1,7 @@
 import mlflow
 
+mlflow.set_experiment('minimum_mlflow')
+
 with mlflow.start_run():
 
     mlflow.log_param("param1", 5)
