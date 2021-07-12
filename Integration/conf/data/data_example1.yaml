@@ -1,2 +1,1 @@
-data:
-  example_data: 'mnist'
+data: 'mnist'
