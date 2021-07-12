@@ -1,3 +1,4 @@
 defaults:
+  - setting: setting1
   - model: model_example1
   - data: data_example1
