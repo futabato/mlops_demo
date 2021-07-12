@@ -12,8 +12,8 @@ def main(cfg):
     dropout = cfg.model.hyperparam.dropout
     batch_size = cfg.model.hyperparam.batch_size
     epochs = cfg.model.hyperparam.epochs
-    print(f'batch_size: {batch_size}')
     print(f'dropout: {dropout}')
+    print(f'batch_size: {batch_size}')
     print(f'epochs: {epochs}')
 
 if __name__ == "__main__":
