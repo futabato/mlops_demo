@@ -2,6 +2,6 @@ work/
 mlflow/mlruns
 mlflow/output.txt
 hydra/outputs/
-Experiment/Run/mlruns/
-Experiment/Run/outputs/
-Experiment/Run/output
+hydra/multirun/
+Integration/mlruns/
+Integration/outputs/
