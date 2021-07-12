@@ -2,7 +2,7 @@
 
 ```
 $ git clone https://github.com/futabato/mlops_demo
-$ cd mlops_demo
+$ cd mlops_demo/
 ```
 
 ### pip install
@@ -20,12 +20,12 @@ $ docker run --rm -it -v "${PWD}:/home" --name mlops_demo -p 5000:5000 mlops_dem
 
 ## hands-on
 
-- mlflow/
-  - mlflowを説明するために必要な最小限のコード
-- hydra/
-  - hydraを説明するために必要な最小限のコード
-- Experiment/
-  - mlflowとhydraを組み合わせて実験管理を行うための最小限のコード
+- `mlflow/`
+  - mlflowを説明するためのコード。
+- `hydra/`
+  - hydraを説明するためのコード。
+- `Integration/`
+  - mlflowとhydraを組み合わせて実験管理を行うためのコード。
 
 ### MLflow WebUI
 
@@ -38,3 +38,4 @@ or
 ```
 $ mlflow ui -h `hostname`
 ```
+
