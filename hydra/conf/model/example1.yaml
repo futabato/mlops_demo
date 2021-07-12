@@ -1,4 +1,4 @@
 hyperparam:
-  layers: 3
   dropout: 0.5
   batch_size: 64
+  epochs: 10

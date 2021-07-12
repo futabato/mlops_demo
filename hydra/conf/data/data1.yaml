@@ -1,6 +1,9 @@
 train:
-  img: 1
+  image_path: "./data/train/images/"
+  label_path: "./data/train/labels/"
 valid:
-  label: 1
+  image_path: "./data/valid/images/"
+  label_path: "./data/valid/labels/"
 test:
-  foo: 'bar'
+  image_path: "./data/test/images/"
+  label_path: "./data/test/labels/"

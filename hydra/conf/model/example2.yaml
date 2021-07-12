@@ -1,3 +1,4 @@
-model:
+hyperparam:
+  dropout: 0.5
   batch_size: 256
-  epoch: 30
+  epochs: 30
