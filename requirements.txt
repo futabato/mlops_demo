@@ -6,3 +6,4 @@ hydra-core
 tensorflow-cpu==2.4.0
 #tensorflow-gpu==2.4.0
 keras
+jupyterlab

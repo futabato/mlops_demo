@@ -15,7 +15,7 @@ $ pip install -r requirements.txt
 
 ```
 $ docker build -t mlops_demo .
-$ docker run --rm -it -v "${PWD}:/home" --name mlops_demo -p 5000:5000 mlops_demo /bin/bash
+$ docker run --rm -it -v "${PWD}:/home" --name mlops_demo -p 5000:5000 -p 8888:8888 mlops_demo /bin/bash
 ```
 
 ## hands-on
@@ -27,7 +27,7 @@ $ docker run --rm -it -v "${PWD}:/home" --name mlops_demo -p 5000:5000 mlops_dem
 - `Integration/`
   - mlflowとhydraを組み合わせて実験管理を行うためのコード。
 
-### MLflow WebUI
+## Launching the Tracking UI
 
 ```
 $ mlflow ui
@@ -39,3 +39,4 @@ or
 $ mlflow ui -h `hostname`
 ```
 
+access <http://localhost:5000>
