@@ -25,7 +25,7 @@ $ docker run --rm -it -v "${PWD}:/home" --name mlops_demo -p 5000:5000 -p 8888:8
 - `hydra/`
   - hydraを説明するためのコード。
 - `Integration/`
-  - mlflowとhydraを組み合わせて実験管理を行うためのコード。
+  - mlflowとhydraを組み合わせた実験管理を説明するためのコード。
 
 ## Launching the Tracking UI
 
