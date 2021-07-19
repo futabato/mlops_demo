@@ -1,4 +1,8 @@
-## install
+# mlops_demo
+
+Manage machine learning experiments using MLflow and Hydra.
+
+## Install
 
 ```
 $ git clone https://github.com/futabato/mlops_demo
@@ -18,7 +22,7 @@ $ docker build -t mlops_demo .
 $ docker run --rm -it -v "${PWD}:/home" --name mlops_demo -p 5000:5000 -p 8888:8888 mlops_demo /bin/bash
 ```
 
-## hands-on
+## Hands-on
 
 - `mlflow/`
   - mlflowを説明するためのコード。
